@@ -51,6 +51,14 @@ class UsersTable extends Table
         $this->hasMany('Questions', [
             'foreignKey' => 'user_id'
         ]);
+        
+        $this->hasMany('LongQuestions', [
+            'className' => 'Questions',
+            'foreignKey' => 'user_id',
+            'conditions' => [
+                'CHAR_LENGTH(LongQuestions.title) > 3'
+                ]
+        ]);
     }
 
     /**

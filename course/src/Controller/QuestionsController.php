@@ -10,6 +10,14 @@ use App\Controller\AppController;
  */
 class QuestionsController extends AppController
 {
+    
+    public function hello ($name = null) {
+        $questions = $this -> Questions -> find()
+        -> contain('YesAnswers');
+        debug($questions);
+        debug($name);
+        $this -> set('name', $name);
+    }
 
     /**
      * Index method
@@ -19,7 +27,7 @@ class QuestionsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Users', 'Elections']
+            'contain' => ['Users', 'Elections', 'YesAnswers']
         ];
         $questions = $this->paginate($this->Questions);
 

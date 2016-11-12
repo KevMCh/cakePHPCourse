@@ -52,8 +52,19 @@ class QuestionsTable extends Table
             'joinType' => 'INNER'
         ]);
         $this->hasMany('Answers', [
-            'foreignKey' => 'question_id'
+            'foreignKey' => 'question_id',
+            'dependent' => true
         ]);
+        
+        $this->hasMany('YesAnswers', [
+            'className' => 'Answers',
+            'foreignKey' => 'question_id',
+            'dependent' => true,
+            'conditions' => [
+                'YesAnswers.answer' => true
+                ]
+        ]);
+        
         $this->belongsToMany('Tags', [
             'foreignKey' => 'question_id',
             'targetForeignKey' => 'tag_id',
