@@ -30,4 +30,12 @@ class Answer extends Entity
         '*' => true,
         'id' => false
     ];
+
+    protected function _getDisplayAnswer()
+    {
+        if ($this->answer) {
+            return __('Sí');
+        }
+        return __('No');
+    }
 }

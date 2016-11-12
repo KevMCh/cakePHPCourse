@@ -70,7 +70,8 @@ class PartiesTable extends Table
             ->notEmpty('description');
 
         $validator
-            ->allowEmpty('url');
+            ->allowEmpty('url')
+            ->url('url', __('The url is not valid'));
 
         return $validator;
     }

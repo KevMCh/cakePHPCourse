@@ -10,6 +10,17 @@ use App\Controller\AppController;
  */
 class AnswersController extends AppController
 {
+    
+    public function logs() {
+        $q = $this->Answers->find();
+        $q
+            ->contain('Users')
+            ->contain('Questions')
+            ->limit(10)
+            ->order(['Answers.id' => 'desc']);
+        debug($q);
+        $this->set('answers', $q);
+    }
 
     /**
      * Index method

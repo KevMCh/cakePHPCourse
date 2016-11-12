@@ -11,12 +11,67 @@ use App\Controller\AppController;
 class QuestionsController extends AppController
 {
     
+    public function latest() {
+        $q = $this->Questions->find();
+        $q
+            ->contain('Users')
+            ->limit(5)
+            ->order(['Questions.created' => 'desc']);
+        $this->set('questions', $q->toArray());
+    }
+    
+    public function download() {
+        
+        $this->response->file(ROOT . DS . 'files' . DS . 'file.txt', [
+            'name' => 'download.txt',
+            'download' => true,
+            ]);
+            
+        return $this -> response;
+    }
+    
+    public function bye () {
+        $this -> redirect(['action' => 'hello']);
+    }
+    
     public function hello ($name = null) {
-        $questions = $this -> Questions -> find()
-        -> contain('YesAnswers');
-        debug($questions);
-        debug($name);
-        $this -> set('name', $name);
+        
+        /*
+        // Save Entitys
+        $data = [
+            'title' => 'q3',
+            'user_id' => 2,
+            'election_id' => 2
+            ];
+
+        $newQuestion = $this->Questions->newEntity($data);
+        //newQuestion es un Entity
+        $saveResult = $this->Questions->save($newQuestion);
+        if (!$saveResult) {
+            debug($newQuestion->errors());
+        }*/
+
+        // Show 
+        $q = $this->Questions->find();
+        $q
+            ->where(['Questions.id' => 3])
+            ->contain(['Users', 'Elections'])
+            ->contain('Answers.Users');
+        $question = $q->first();
+        $this->set('name', $name);
+        $this->set('question', $question);
+        
+        //Change Entities
+        /*$q = $this->Questions->find();
+        $q
+            ->where(['Questions.id' => 3])
+            ->contain(['Users', 'Elections'])
+            ->contain('Answers.Users');
+        $question = $q->first();
+        $question->title = 'New title';
+        $this->Questions->save($question);
+        $this->set('name', $name);
+        $this->set('question', $question);*/
     }
 
     /**

@@ -86,7 +86,7 @@ class QuestionsTable extends Table
 
         $validator
             ->requirePresence('title', 'create')
-            ->notEmpty('title');
+            ->minLength('title', 4, __('The {0} must have at least {1} characters'. 'title', 4));
 
         return $validator;
     }
