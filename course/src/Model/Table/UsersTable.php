@@ -110,4 +110,20 @@ class UsersTable extends Table
 
         return $rules;
     }
+    
+    public function findLatest(Query $query, array $option) {
+        return $query
+                -> order(['created' => 'desc']);
+    }
+    
+    public function findByEmail(Query $query, array $options) {
+        return $query
+            ->where(['email' => $options['email']]);
+    }
+    
+    public function findByFirstName(Query $query, array $options) {
+        return $query
+            ->where(['first_name' => $options['firstName']]);
+
+    }
 }

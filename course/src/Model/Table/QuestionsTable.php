@@ -3,8 +3,8 @@ namespace App\Model\Table;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
-use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use Cake\Utility\Hash;
 
 /**
  * Questions Model
@@ -47,24 +47,29 @@ class QuestionsTable extends Table
             'foreignKey' => 'user_id',
             'joinType' => 'INNER'
         ]);
+        /*
+        $this->belongsTo('Owners', [
+            'className' => 'Users',
+            'foreignKey' => 'user_id',
+            'joinType' => 'INNER'
+        ]);
+        */
         $this->belongsTo('Elections', [
             'foreignKey' => 'election_id',
             'joinType' => 'INNER'
         ]);
         $this->hasMany('Answers', [
             'foreignKey' => 'question_id',
-            'dependent' => true
+            'dependent' => true,
         ]);
-        
         $this->hasMany('YesAnswers', [
             'className' => 'Answers',
             'foreignKey' => 'question_id',
             'dependent' => true,
             'conditions' => [
-                'YesAnswers.answer' => true
+                'YesAnswers.answer' => 1
                 ]
         ]);
-        
         $this->belongsToMany('Tags', [
             'foreignKey' => 'question_id',
             'targetForeignKey' => 'tag_id',
@@ -86,7 +91,7 @@ class QuestionsTable extends Table
 
         $validator
             ->requirePresence('title', 'create')
-            ->minLength('title', 4, __('The {0} must have at least {1} characters'. 'title', 4));
+            ->minLength('title', 4, __('El {0} debe tener al menos {1} caracteres', 'title', 4));
 
         return $validator;
     }
@@ -104,5 +109,31 @@ class QuestionsTable extends Table
         $rules->add($rules->existsIn(['election_id'], 'Elections'));
 
         return $rules;
+    }
+    
+    public function findSearch(Query $q, $options)
+    {
+        $title = Hash::get($options, 'title');
+        $owner = Hash::get($options, 'owner');
+
+        if (!$title && !$owner) {
+            throw new OutOfBoundsException('Filter is required');
+        }
+
+        if ($title) {
+            $q->where([
+                "{$this->aliasField('title')} LIKE" => '%' . $title . '%'
+                ]);
+        }
+
+        if ($owner) {
+            $q->matching('Users', function(Query $filter) use ($owner) {
+                return $filter->where([
+                    "Users.first_name LIKE" => '%' . $owner . '%'
+                    ]);
+            });
+        }
+
+        return $q;
     }
 }

@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use \Cake\ORM\Query;
 
 /**
  * Questions Controller
@@ -10,6 +11,88 @@ use App\Controller\AppController;
  */
 class QuestionsController extends AppController
 {
+    public function search (){
+        $options = $this->request->query;
+        $q = $this->Questions->find('search', $options);
+        debug($q->toArray());
+        $this->render(false);
+    }
+    
+    // Query using contain
+    public function answerYes() {
+        $q = $this -> Questions -> find();
+        $answersFilter = function(Query $query) {
+                return $query -> where(['answer' => true]);
+            };
+
+        $q
+            -> contain(['Answers' => $answersFilter]);
+            // -> contain(['Users.Parties' => function(...)])
+        debug($q -> toArray());
+        $this -> render(false);
+    }
+    
+    // Query with matching
+    public function onlyAnswerNo() {
+        $q = $this -> Questions -> find();
+        $answersFilter = function(Query $query) {
+                return $query -> where(['answer' => false]);
+            };
+
+        $q
+            -> matching('Answers', $answersFilter);
+        debug($q -> toArray());
+        $this -> render(false);
+    }
+    
+    public function lastUserCreated () {
+        /*$q = $this -> Questions -> Users -> find();
+        $q
+            -> order(['created' => 'desc']);
+        debug($q -> first());
+        //$q = $this->loadModel('Users')->find();*/
+        
+        $q = $this->Questions->Users->find('byFirstName', [
+            'firstName' => 'first'
+            ])
+            -> find('latest');
+        $q
+            -> order(['created' => 'desc']);
+        debug($q -> toArray());
+        //$q = $this->loadModel('Users')->find();
+        
+        $this->render(false);
+    }
+    
+    public function review ($userEmail = null){
+        $q = $this->Questions->find('latest');
+
+        /*$q = $this -> Questions -> find();
+        $q
+            /*-> order([
+                'Questions.title' => 'asc',
+                ]);*/
+            /*-> contain('Users')
+            -> where([
+                'Users.email' => $userEmail
+                ]);*/
+            
+            /*->contain('Users')
+            ->contain('Answers')
+            ->where(['Users.email' => $userEmail])
+            ->where(['Answers.answer' => true]);
+            
+        debug($q->toArray());
+        $this->render(false);
+
+                
+        //debug($q -> sql());
+        debug($q -> toArray());*/
+        
+        
+        
+        $this->render(false);
+    }
     
     public function latest() {
         $q = $this->Questions->find();
@@ -73,6 +156,8 @@ class QuestionsController extends AppController
         $this->set('name', $name);
         $this->set('question', $question);*/
     }
+    
+    
 
     /**
      * Index method
