@@ -5,6 +5,9 @@ use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use Cake\Datasource\EntityInterface;
+use Cake\Event\Event;
+use Cake\Core\Configure;
 
 /**
  * Elections Model
@@ -67,5 +70,23 @@ class ElectionsTable extends Table
             ->notEmpty('year');
 
         return $validator;
+    }
+
+    public function afterSave(Event $event, EntityInterface $election, \ArrayObject $options)
+    {
+        if (!$election->isNew()) {
+            return true;
+        }
+        //recuperar las preguntas de config
+        $questions = Configure::read('Elections.defaultQuestions');
+        $questionEntities = [];
+        foreach ($questions as $question) {
+            $question['election_id'] = $election->id;
+            $question['user_id'] = 2;
+            $questionEntity = $this->Questions->newEntity($question);
+            $questionEntities[] = $questionEntity;
+        }
+        //salvarlas todas vinculadas a este election
+        return $this->Questions->saveMany($questionEntities);
     }
 }

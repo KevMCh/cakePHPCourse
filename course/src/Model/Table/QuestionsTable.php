@@ -141,4 +141,17 @@ class QuestionsTable extends Table
         return $q
             -> order(['created' => 'desc']);
     }
+    
+    public function findLatestElection(Query $q, array $options)
+    {
+        if (empty($options['election_id'])) {
+            throw new OutOfBoundsException('election_id is required');
+        }
+        $q
+            ->where([$this->aliasField('election_id') => $options['election_id']])
+            ->limit(5)
+            ->order([$this->aliasField('created') => 'desc'])
+            ;
+        return $q;
+    }
 }

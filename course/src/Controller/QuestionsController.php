@@ -11,6 +11,7 @@ use \Cake\ORM\Query;
  */
 class QuestionsController extends AppController
 {
+    
     public function search (){
         $options = $this->request->query;
         $q = $this->Questions->find('search', $options);

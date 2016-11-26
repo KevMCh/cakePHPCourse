@@ -223,3 +223,4 @@ if (Configure::read('debug')) {
 }
 
 Plugin::load('Migrations');
+Configure::load('elections');

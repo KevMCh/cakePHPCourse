@@ -81,4 +81,19 @@ class AnswersTable extends Table
 
         return $rules;
     }
+    
+    /**
+     * all answers from latest 5 questions related to 1 election_id
+     */
+     public function findLatestAnswersFromLatestQuestions(Query $q, array $options)
+     {
+         //if !$options election_id -> exception
+         $questionIdField = $this->aliasField('question_id IN');
+         $questionIds = $this->Questions
+            ->find('latestElection', $options)
+            ->extract('id')
+            ->toArray();
+         return $q
+            ->where([$questionIdField => $questionIds]);
+     }
 }

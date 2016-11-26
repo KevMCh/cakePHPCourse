@@ -11,6 +11,13 @@ use App\Controller\AppController;
 class AnswersController extends AppController
 {
     
+    public function custom()
+    {
+        $q = $this->Answers->find('latestAnswersFromLatestQuestions', ['election_id' => 2]);
+        debug($q->toArray());
+        $this->render(false);
+    }
+    
     public function logs() {
         $q = $this->Answers->find();
         $q
@@ -125,5 +132,41 @@ class AnswersController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+    
+    public function quick()
+    {
+        $userId = 2;
+        $q = $this->Answers->Questions->find()
+            ->contain(['Answers' => function ($q) use ($userId) {
+                return $q->where(['Answers.user_id' => $userId]);
+            }]);
+        $this->set('questions', $q);
+    }
+    
+    public function answer($questionId, $answerValue)
+    {
+        $this->request->allowMethod(['post']);
+        $userId = 2;
+        //comprobar si ya tengo una respuesta
+        $answer = $this->Answers->find()
+            ->where([
+                'Answers.user_id' => $userId,
+                'Answers.question_id' => $questionId
+                ])
+            ->first();
+        //si no, la creo
+        if (!$answer) {
+            $answer = $this->Answers->newEntity([
+                'user_id' => $userId,
+                'question_id' => $questionId,
+                ]);
+        }
+        //si ya existe o es nueva, actualizo answer
+        $answer['answer'] = $answerValue;
+        if (!$this->Answers->save($answer)) {
+            $this->Flash->error('Answer could not be saved');
+        }
+        return $this->redirect(['action' => 'quick']);
     }
 }
