@@ -136,4 +136,9 @@ class QuestionsTable extends Table
 
         return $q;
     }
+    
+    public function findLastUserCreated (Query $q, $options){
+        return $q
+            -> order(['created' => 'desc']);
+    }
 }
