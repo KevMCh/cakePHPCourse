@@ -154,4 +154,11 @@ class QuestionsTable extends Table
             ;
         return $q;
     }
+    
+    public function findDetailsLastQuestions(Query $q, array $options) {
+        return $q
+                ->contain(['Users', 'Elections'])
+                ->contain('Answers.Users')
+                -> limit(10);
+    }
 }

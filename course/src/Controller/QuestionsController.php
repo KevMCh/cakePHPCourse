@@ -12,8 +12,16 @@ use \Cake\ORM\Query;
 class QuestionsController extends AppController
 {
     
+    public function detailsLastQuestions() {
+        $q = $this -> Questions -> find('detailsLastQuestions')
+                   -> contain('Answers');
+        
+        $question = $q -> toArray();
+        $this->set('questions', $question);
+    }
+    
     public function search (){
-        $options = $this->request->query;
+        $options = $this -> request -> query;
         $q = $this->Questions->find('search', $options);
         debug($q->toArray());
         $this->render(false);

@@ -1014,3 +1014,163 @@
 [21-Nov-2016 19:24:01 UTC] PHP  14. Cake\Controller\Controller->invokeAction() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php:122
 [21-Nov-2016 19:24:01 UTC] PHP  15. call_user_func_array:{/home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Controller/Controller.php:435}() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Controller/Controller.php:435
 [21-Nov-2016 19:24:01 UTC] PHP  16. App\Controller\ListQuestionsController->index() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Controller/Controller.php:435
+[26-Nov-2016 22:50:46 UTC] PHP Fatal error:  Call to a member function find() on a non-object in /home/ubuntu/workspace/cakePHPcourse/course/src/Controller/QuestionsController.php on line 17
+[26-Nov-2016 22:50:46 UTC] PHP Stack trace:
+[26-Nov-2016 22:50:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/cakePHPcourse/course/webroot/index.php:0
+[26-Nov-2016 22:50:46 UTC] PHP   2. Cake\Http\Server->run() /home/ubuntu/workspace/cakePHPcourse/course/webroot/index.php:37
+[26-Nov-2016 22:50:46 UTC] PHP   3. Cake\Http\Runner->run() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Server.php:92
+[26-Nov-2016 22:50:46 UTC] PHP   4. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:51
+[26-Nov-2016 22:50:46 UTC] PHP   5. Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[26-Nov-2016 22:50:46 UTC] PHP   6. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:81
+[26-Nov-2016 22:50:46 UTC] PHP   7. Cake\Routing\Middleware\AssetMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[26-Nov-2016 22:50:46 UTC] PHP   8. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:88
+[26-Nov-2016 22:50:46 UTC] PHP   9. Cake\Routing\Middleware\RoutingMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[26-Nov-2016 22:50:46 UTC] PHP  10. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:62
+[26-Nov-2016 22:50:46 UTC] PHP  11. Cake\Http\BaseApplication->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[26-Nov-2016 22:50:46 UTC] PHP  12. Cake\Http\ActionDispatcher->dispatch() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/BaseApplication.php:83
+[26-Nov-2016 22:50:46 UTC] PHP  13. Cake\Http\ActionDispatcher->_invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php:96
+[26-Nov-2016 22:50:46 UTC] PHP  14. Cake\Controller\Controller->invokeAction() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php:122
+[26-Nov-2016 22:50:46 UTC] PHP  15. call_user_func_array:{/home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Controller/Controller.php:435}() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Controller/Controller.php:435
+[26-Nov-2016 22:50:46 UTC] PHP  16. App\Controller\QuestionsController->detailsLastQuestions() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Controller/Controller.php:435
+[26-Nov-2016 23:20:56 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/ubuntu/workspace/cakePHPcourse/course/src/Model/Table/QuestionsTable.php on line 163
+[26-Nov-2016 23:20:56 UTC] PHP Stack trace:
+[26-Nov-2016 23:20:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/cakePHPcourse/course/webroot/index.php:0
+[26-Nov-2016 23:20:56 UTC] PHP   2. Cake\Http\Server->run() /home/ubuntu/workspace/cakePHPcourse/course/webroot/index.php:37
+[26-Nov-2016 23:20:56 UTC] PHP   3. Cake\Http\Runner->run() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Server.php:92
+[26-Nov-2016 23:20:56 UTC] PHP   4. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:51
+[26-Nov-2016 23:20:56 UTC] PHP   5. Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[26-Nov-2016 23:20:56 UTC] PHP   6. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:81
+[26-Nov-2016 23:20:56 UTC] PHP   7. Cake\Routing\Middleware\AssetMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[26-Nov-2016 23:20:56 UTC] PHP   8. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:88
+[26-Nov-2016 23:20:56 UTC] PHP   9. Cake\Routing\Middleware\RoutingMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[26-Nov-2016 23:20:56 UTC] PHP  10. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:62
+[26-Nov-2016 23:20:56 UTC] PHP  11. Cake\Http\BaseApplication->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[26-Nov-2016 23:20:56 UTC] PHP  12. Cake\Http\ActionDispatcher->dispatch() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/BaseApplication.php:83
+[26-Nov-2016 23:20:56 UTC] PHP  13. Cake\Http\ActionDispatcher->_invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php:96
+[26-Nov-2016 23:20:56 UTC] PHP  14. Cake\Controller\Controller->invokeAction() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php:122
+[26-Nov-2016 23:20:56 UTC] PHP  15. call_user_func_array:{/home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Controller/Controller.php:435}() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Controller/Controller.php:435
+[26-Nov-2016 23:20:56 UTC] PHP  16. App\Controller\QuestionsController->detailsLastQuestions() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Controller/Controller.php:435
+[26-Nov-2016 23:20:56 UTC] PHP  17. Cake\Controller\Controller->__get() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Controller/Controller.php:16
+[26-Nov-2016 23:20:56 UTC] PHP  18. Cake\Controller\Controller->loadModel() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Controller/Controller.php:350
+[26-Nov-2016 23:20:56 UTC] PHP  19. Cake\ORM\Locator\TableLocator->get() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php:112
+[26-Nov-2016 23:20:56 UTC] PHP  20. Cake\ORM\Locator\TableLocator->_getClassName() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php:156
+[26-Nov-2016 23:20:56 UTC] PHP  21. Cake\Core\App::className() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php:201
+[26-Nov-2016 23:20:56 UTC] PHP  22. Cake\Core\App::_classExistsInBase() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Core/App.php:64
+[26-Nov-2016 23:20:56 UTC] PHP  23. class_exists() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Core/App.php:152
+[26-Nov-2016 23:20:56 UTC] PHP  24. spl_autoload_call() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Core/App.php:152
+[26-Nov-2016 23:20:56 UTC] PHP  25. Composer\Autoload\ClassLoader->loadClass() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Core/App.php:152
+[26-Nov-2016 23:20:56 UTC] PHP  26. Composer\Autoload\includeFile() /home/ubuntu/workspace/cakePHPcourse/course/vendor/composer/ClassLoader.php:301
+[27-Nov-2016 00:13:39 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /home/ubuntu/workspace/cakePHPcourse/course/src/Template/Questions/details_last_questions.ctp on line 13
+[27-Nov-2016 00:13:39 UTC] PHP Stack trace:
+[27-Nov-2016 00:13:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/cakePHPcourse/course/webroot/index.php:0
+[27-Nov-2016 00:13:39 UTC] PHP   2. Cake\Http\Server->run() /home/ubuntu/workspace/cakePHPcourse/course/webroot/index.php:37
+[27-Nov-2016 00:13:39 UTC] PHP   3. Cake\Http\Runner->run() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Server.php:92
+[27-Nov-2016 00:13:39 UTC] PHP   4. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:51
+[27-Nov-2016 00:13:39 UTC] PHP   5. Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:13:39 UTC] PHP   6. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:81
+[27-Nov-2016 00:13:39 UTC] PHP   7. Cake\Routing\Middleware\AssetMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:13:39 UTC] PHP   8. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:88
+[27-Nov-2016 00:13:39 UTC] PHP   9. Cake\Routing\Middleware\RoutingMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:13:39 UTC] PHP  10. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:62
+[27-Nov-2016 00:13:39 UTC] PHP  11. Cake\Http\BaseApplication->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:13:39 UTC] PHP  12. Cake\Http\ActionDispatcher->dispatch() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/BaseApplication.php:83
+[27-Nov-2016 00:13:39 UTC] PHP  13. Cake\Http\ActionDispatcher->_invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php:96
+[27-Nov-2016 00:13:39 UTC] PHP  14. Cake\Controller\Controller->render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php:128
+[27-Nov-2016 00:13:39 UTC] PHP  15. Cake\View\View->render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Controller/Controller.php:617
+[27-Nov-2016 00:13:39 UTC] PHP  16. Cake\View\View->_render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/View/View.php:597
+[27-Nov-2016 00:13:39 UTC] PHP  17. Cake\View\View->_evaluate() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/View/View.php:973
+[27-Nov-2016 00:18:36 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/cakePHPcourse/course/src/Template/Questions/details_last_questions.ctp on line 17
+[27-Nov-2016 00:18:36 UTC] PHP Stack trace:
+[27-Nov-2016 00:18:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/cakePHPcourse/course/webroot/index.php:0
+[27-Nov-2016 00:18:36 UTC] PHP   2. Cake\Http\Server->run() /home/ubuntu/workspace/cakePHPcourse/course/webroot/index.php:37
+[27-Nov-2016 00:18:36 UTC] PHP   3. Cake\Http\Runner->run() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Server.php:92
+[27-Nov-2016 00:18:36 UTC] PHP   4. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:51
+[27-Nov-2016 00:18:36 UTC] PHP   5. Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:18:36 UTC] PHP   6. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:81
+[27-Nov-2016 00:18:36 UTC] PHP   7. Cake\Routing\Middleware\AssetMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:18:36 UTC] PHP   8. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:88
+[27-Nov-2016 00:18:36 UTC] PHP   9. Cake\Routing\Middleware\RoutingMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:18:36 UTC] PHP  10. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:62
+[27-Nov-2016 00:18:36 UTC] PHP  11. Cake\Http\BaseApplication->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:18:36 UTC] PHP  12. Cake\Http\ActionDispatcher->dispatch() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/BaseApplication.php:83
+[27-Nov-2016 00:18:36 UTC] PHP  13. Cake\Http\ActionDispatcher->_invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php:96
+[27-Nov-2016 00:18:36 UTC] PHP  14. Cake\Controller\Controller->render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php:128
+[27-Nov-2016 00:18:36 UTC] PHP  15. Cake\View\View->render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Controller/Controller.php:617
+[27-Nov-2016 00:18:36 UTC] PHP  16. Cake\View\View->_render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/View/View.php:597
+[27-Nov-2016 00:18:36 UTC] PHP  17. Cake\View\View->_evaluate() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/View/View.php:973
+[27-Nov-2016 00:18:43 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/cakePHPcourse/course/src/Template/Questions/details_last_questions.ctp on line 17
+[27-Nov-2016 00:18:43 UTC] PHP Stack trace:
+[27-Nov-2016 00:18:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/cakePHPcourse/course/webroot/index.php:0
+[27-Nov-2016 00:18:43 UTC] PHP   2. Cake\Http\Server->run() /home/ubuntu/workspace/cakePHPcourse/course/webroot/index.php:37
+[27-Nov-2016 00:18:43 UTC] PHP   3. Cake\Http\Runner->run() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Server.php:92
+[27-Nov-2016 00:18:43 UTC] PHP   4. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:51
+[27-Nov-2016 00:18:43 UTC] PHP   5. Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:18:43 UTC] PHP   6. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:81
+[27-Nov-2016 00:18:43 UTC] PHP   7. Cake\Routing\Middleware\AssetMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:18:43 UTC] PHP   8. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:88
+[27-Nov-2016 00:18:43 UTC] PHP   9. Cake\Routing\Middleware\RoutingMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:18:43 UTC] PHP  10. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:62
+[27-Nov-2016 00:18:43 UTC] PHP  11. Cake\Http\BaseApplication->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:18:43 UTC] PHP  12. Cake\Http\ActionDispatcher->dispatch() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/BaseApplication.php:83
+[27-Nov-2016 00:18:43 UTC] PHP  13. Cake\Http\ActionDispatcher->_invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php:96
+[27-Nov-2016 00:18:43 UTC] PHP  14. Cake\Controller\Controller->render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php:128
+[27-Nov-2016 00:18:43 UTC] PHP  15. Cake\View\View->render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Controller/Controller.php:617
+[27-Nov-2016 00:18:43 UTC] PHP  16. Cake\View\View->_render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/View/View.php:597
+[27-Nov-2016 00:18:43 UTC] PHP  17. Cake\View\View->_evaluate() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/View/View.php:973
+[27-Nov-2016 00:22:21 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/cakePHPcourse/course/src/Template/Questions/details_last_questions.ctp on line 18
+[27-Nov-2016 00:22:21 UTC] PHP Stack trace:
+[27-Nov-2016 00:22:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/cakePHPcourse/course/webroot/index.php:0
+[27-Nov-2016 00:22:21 UTC] PHP   2. Cake\Http\Server->run() /home/ubuntu/workspace/cakePHPcourse/course/webroot/index.php:37
+[27-Nov-2016 00:22:21 UTC] PHP   3. Cake\Http\Runner->run() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Server.php:92
+[27-Nov-2016 00:22:21 UTC] PHP   4. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:51
+[27-Nov-2016 00:22:21 UTC] PHP   5. Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:22:21 UTC] PHP   6. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:81
+[27-Nov-2016 00:22:21 UTC] PHP   7. Cake\Routing\Middleware\AssetMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:22:21 UTC] PHP   8. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:88
+[27-Nov-2016 00:22:21 UTC] PHP   9. Cake\Routing\Middleware\RoutingMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:22:21 UTC] PHP  10. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:62
+[27-Nov-2016 00:22:21 UTC] PHP  11. Cake\Http\BaseApplication->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:22:21 UTC] PHP  12. Cake\Http\ActionDispatcher->dispatch() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/BaseApplication.php:83
+[27-Nov-2016 00:22:21 UTC] PHP  13. Cake\Http\ActionDispatcher->_invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php:96
+[27-Nov-2016 00:22:21 UTC] PHP  14. Cake\Controller\Controller->render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php:128
+[27-Nov-2016 00:22:21 UTC] PHP  15. Cake\View\View->render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Controller/Controller.php:617
+[27-Nov-2016 00:22:21 UTC] PHP  16. Cake\View\View->_render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/View/View.php:597
+[27-Nov-2016 00:22:21 UTC] PHP  17. Cake\View\View->_evaluate() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/View/View.php:973
+[27-Nov-2016 00:23:39 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/ubuntu/workspace/cakePHPcourse/course/src/Template/Questions/details_last_questions.ctp on line 32
+[27-Nov-2016 00:23:39 UTC] PHP Stack trace:
+[27-Nov-2016 00:23:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/cakePHPcourse/course/webroot/index.php:0
+[27-Nov-2016 00:23:39 UTC] PHP   2. Cake\Http\Server->run() /home/ubuntu/workspace/cakePHPcourse/course/webroot/index.php:37
+[27-Nov-2016 00:23:39 UTC] PHP   3. Cake\Http\Runner->run() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Server.php:92
+[27-Nov-2016 00:23:39 UTC] PHP   4. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:51
+[27-Nov-2016 00:23:39 UTC] PHP   5. Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:23:39 UTC] PHP   6. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:81
+[27-Nov-2016 00:23:39 UTC] PHP   7. Cake\Routing\Middleware\AssetMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:23:39 UTC] PHP   8. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:88
+[27-Nov-2016 00:23:39 UTC] PHP   9. Cake\Routing\Middleware\RoutingMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:23:39 UTC] PHP  10. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:62
+[27-Nov-2016 00:23:39 UTC] PHP  11. Cake\Http\BaseApplication->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:23:39 UTC] PHP  12. Cake\Http\ActionDispatcher->dispatch() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/BaseApplication.php:83
+[27-Nov-2016 00:23:39 UTC] PHP  13. Cake\Http\ActionDispatcher->_invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php:96
+[27-Nov-2016 00:23:39 UTC] PHP  14. Cake\Controller\Controller->render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php:128
+[27-Nov-2016 00:23:39 UTC] PHP  15. Cake\View\View->render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Controller/Controller.php:617
+[27-Nov-2016 00:23:39 UTC] PHP  16. Cake\View\View->_render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/View/View.php:597
+[27-Nov-2016 00:23:39 UTC] PHP  17. Cake\View\View->_evaluate() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/View/View.php:973
+[27-Nov-2016 00:35:03 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /home/ubuntu/workspace/cakePHPcourse/course/src/Template/Questions/details_last_questions.ctp on line 20
+[27-Nov-2016 00:35:03 UTC] PHP Stack trace:
+[27-Nov-2016 00:35:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/cakePHPcourse/course/webroot/index.php:0
+[27-Nov-2016 00:35:03 UTC] PHP   2. Cake\Http\Server->run() /home/ubuntu/workspace/cakePHPcourse/course/webroot/index.php:37
+[27-Nov-2016 00:35:03 UTC] PHP   3. Cake\Http\Runner->run() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Server.php:92
+[27-Nov-2016 00:35:03 UTC] PHP   4. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:51
+[27-Nov-2016 00:35:03 UTC] PHP   5. Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:35:03 UTC] PHP   6. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:81
+[27-Nov-2016 00:35:03 UTC] PHP   7. Cake\Routing\Middleware\AssetMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:35:03 UTC] PHP   8. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:88
+[27-Nov-2016 00:35:03 UTC] PHP   9. Cake\Routing\Middleware\RoutingMiddleware->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:35:03 UTC] PHP  10. Cake\Http\Runner->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:62
+[27-Nov-2016 00:35:03 UTC] PHP  11. Cake\Http\BaseApplication->__invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/Runner.php:65
+[27-Nov-2016 00:35:03 UTC] PHP  12. Cake\Http\ActionDispatcher->dispatch() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/BaseApplication.php:83
+[27-Nov-2016 00:35:03 UTC] PHP  13. Cake\Http\ActionDispatcher->_invoke() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php:96
+[27-Nov-2016 00:35:03 UTC] PHP  14. Cake\Controller\Controller->render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php:128
+[27-Nov-2016 00:35:03 UTC] PHP  15. Cake\View\View->render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Controller/Controller.php:617
+[27-Nov-2016 00:35:03 UTC] PHP  16. Cake\View\View->_render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/View/View.php:597
+[27-Nov-2016 00:35:03 UTC] PHP  17. Cake\View\View->_evaluate() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/View/View.php:973
