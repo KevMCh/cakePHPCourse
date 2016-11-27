@@ -11,7 +11,14 @@ use App\Controller\AppController;
  */
 class UsersController extends AppController
 {
-
+    public function usersActivity()
+    {
+        $qUsers = $this -> Users -> find('latestAnswers');
+        $users = $qUsers -> toArray();
+        
+        $this -> set('users', $users);
+    }
+    
     /**
      * Index method
      *

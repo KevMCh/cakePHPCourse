@@ -128,4 +128,13 @@ class UsersTable extends Table
             ->where(['first_name' => $options['firstName']]);
 
     }
+    
+    public function findLatestAnswers(Query $query, array $options) {
+        $lastest = function(Query $q) {
+                return $q -> order(['id' => 'desc']);
+            };
+        
+        return $query
+                -> contain(['Answers' => $lastest]);
+    }
 }

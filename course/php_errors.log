@@ -1174,3 +1174,9 @@
 [27-Nov-2016 00:35:03 UTC] PHP  15. Cake\View\View->render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/Controller/Controller.php:617
 [27-Nov-2016 00:35:03 UTC] PHP  16. Cake\View\View->_render() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/View/View.php:597
 [27-Nov-2016 00:35:03 UTC] PHP  17. Cake\View\View->_evaluate() /home/ubuntu/workspace/cakePHPcourse/course/vendor/cakephp/cakephp/src/View/View.php:973
+[27-Nov-2016 11:36:01 UTC] PHP Warning:  require(/home/ubuntu/workspace/cakePHPCourse/course/vendor/autoload.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cakePHPCourse/course/webroot/index.php on line 27
+[27-Nov-2016 11:36:01 UTC] PHP Stack trace:
+[27-Nov-2016 11:36:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/cakePHPCourse/course/webroot/index.php:0
+[27-Nov-2016 11:36:01 UTC] PHP Fatal error:  require(): Failed opening required '/home/ubuntu/workspace/cakePHPCourse/course/vendor/autoload.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cakePHPCourse/course/webroot/index.php on line 27
+[27-Nov-2016 11:36:01 UTC] PHP Stack trace:
+[27-Nov-2016 11:36:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/cakePHPCourse/course/webroot/index.php:0
